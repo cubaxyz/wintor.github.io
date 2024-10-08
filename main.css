@@ -6,17 +6,21 @@ html {
   margin: 0;
   padding: 0;
 }
+
 body {
   background: black;
 }
+
 #overlay-toggle {
   position:absolute;
   display: none;
 }
+
 .overlay {
   z-index: 1;
   background-color: black;
 }
+
 .overlay label {
   display: grid;
   place-items: center;
@@ -25,12 +29,15 @@ body {
   color: rgb(255, 255, 255);
   font-size: 2rem;
 }
+
 .no-hover {
   display: block;
 }
+
 .hover {
   display: none;
 }
+
 .fullscreen {
   position: fixed;
   top: 50%;
@@ -39,27 +46,33 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 }
+
 body {
   font-family:monospace!important;
   background-color:#000!important;
   color:#fff!important
 }
+
 a {
   text-decoration:none;
   color:gray!important
 }
+
 a:hover {
   transition:.4s!important;
   color:#fff!important
 }
+
 .ascii {
   color:rgb(199, 199, 199)!important;
   top:50%
 }
+
 span::before {
   content:'\A';
   white-space:pre
 }
+
 #center {
   position:absolute;
   left:50%;
@@ -70,18 +83,21 @@ span::before {
   -ms-transform:translate(-50%,-50%);
   -o-transform:translate(-50%,-50%)
 }
+
 #overlay-toggle:checked ~ .overlay {
   animation-fill-mode: forwards;
   animation-name: fade, hide;
   animation-delay: 0s, 600ms;
   animation-duration: 600ms, 1ms;
 }
+
 #overlay-toggle:checked ~ .overlay label {
   animation-fill-mode: forwards;
   animation-name: fade;
   animation-delay: 0s;
   animation-duration: 500ms;
 }
+
 @media(hover: hover) {
   .hover {
     display: block;
@@ -90,18 +106,38 @@ span::before {
     display: none;
   }
 }
+
 @keyframes fade{
   to {
     opacity: 0;
   }
 }
+
 @keyframes hide {
   to {
     visibility: hidden;
   }
 }
 
+.link-button {
+    background: none; 
+    border: none; 
+    color: gray; 
+    cursor: pointer; 
+    padding: 0;
+    transition: color 0.4s, background-color 0.4s;
+    font-family: monospace;
+    font-size: 1rem;
+}
 
+.link-button:hover {
+    color: white; 
+    transition: color 0.4s; 
+}
+
+.link-button:focus {
+    outline: none; 
+}
 
 .bg {
     background-size: cover;
@@ -112,6 +148,7 @@ span::before {
     left: 0;
     z-index: -3;
 }
+
 .bg:before {
     content: "";
     width: 100%;
@@ -123,6 +160,7 @@ span::before {
     left: 0;
     opacity: 0.3;
 }
+
 @keyframes sf-fly-by-1 {
     from {
         transform: translateZ(-600px);
@@ -133,6 +171,7 @@ span::before {
         opacity: 0.5;
     }
 }
+
 @keyframes sf-fly-by-2 {
     from {
         transform: translateZ(-1200px);
@@ -143,6 +182,7 @@ span::before {
         opacity: 0.5;
     }
 }
+
 @keyframes sf-fly-by-3 {
     from {
         transform: translateZ(-1800px);
@@ -153,6 +193,7 @@ span::before {
         opacity: 0.5;
     }
 }
+
 .star-field {
     position: fixed;
     top: 0;
@@ -163,6 +204,7 @@ span::before {
     -webkit-perspective: 600px;
     z-index: -1;
 }
+
 .star-field .layer {
     box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7,
         524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2,
@@ -182,12 +224,15 @@ span::before {
     width: 4px;
     border-radius: 2px;
 }
+
 .star-field .layer:nth-child(1) {
     animation: sf-fly-by-1 5s linear infinite;
 }
+
 .star-field .layer:nth-child(2) {
     animation: sf-fly-by-2 5s linear infinite;
 }
+
 .star-field .layer:nth-child(3) {
     animation: sf-fly-by-3 5s linear infinite;
 }
